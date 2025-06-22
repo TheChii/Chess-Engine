@@ -167,7 +167,7 @@ namespace ChessEngine
             // Toggle turn
             whiteToMove = !whiteToMove;
         }
-        
+
         public GameState DeepCopy()
         {
             return new GameState
@@ -205,7 +205,7 @@ namespace ChessEngine
                 if (board[i] == kingPiece)
                     return i;
             }
-            return -1; 
+            return -1;
         }
 
         private bool HasInsufficientMaterial()

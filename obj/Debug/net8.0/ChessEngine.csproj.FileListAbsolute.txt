@@ -12,3 +12,4 @@ C:\Users\thech\source\repos\ChessEngine\ChessEngine\obj\Debug\net8.0\refint\Ches
 C:\Users\thech\source\repos\ChessEngine\ChessEngine\obj\Debug\net8.0\ChessEngine.pdb
 C:\Users\thech\source\repos\ChessEngine\ChessEngine\obj\Debug\net8.0\ChessEngine.genruntimeconfig.cache
 C:\Users\thech\source\repos\ChessEngine\ChessEngine\obj\Debug\net8.0\ref\ChessEngine.dll
+C:\Users\thech\source\repos\ChessEngine\ChessEngine\obj\Debug\net8.0\ChessEngine.sourcelink.json

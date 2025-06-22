@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace ChessEngine
 {
     class HumanVsEngine
     {
         static GameState gameState = new GameState();
-        static Search engine = new Search(3); // Depth 3 search
+        static Search engine = new Search(5); 
 
         static void Main(string[] args)
         {
@@ -133,3 +134,64 @@ namespace ChessEngine
         }
     }
 }
+
+
+/*
+namespace ChessEngine
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Fen string:");
+            string fenInput = Console.ReadLine();
+            FenBoard fenBoard = new FenBoard(fenInput);
+            GameState gameState = fenBoard.GameStateFromFen(fenInput);
+
+            PrintBoard(gameState);
+
+        }
+        static void PrintBoard(GameState gameState)
+        {
+            Console.WriteLine();
+            Console.WriteLine("  +------------------------+");
+            for (int rank = 0; rank < 8; rank++)
+            {
+                Console.Write($"{8 - rank} |");
+                for (int file = 0; file < 8; file++)
+                {
+                    int square = rank * 8 + file;
+                    int piece = gameState.board[square];
+                    Console.Write($" {GetPieceSymbol(piece)}");
+                }
+                Console.WriteLine(" |");
+            }
+            Console.WriteLine("  +------------------------+");
+            Console.WriteLine("    a b c d e f g h");
+            Console.WriteLine();
+            Console.WriteLine($"Turn: {(gameState.whiteToMove ? "White" : "Black")}");
+        }
+        static string GetPieceSymbol(int piece)
+        {
+            return piece switch
+            {
+                (int)Piece.PawnWhite => "P",
+                (int)Piece.KnightWhite => "N",
+                (int)Piece.BishopWhite => "B",
+                (int)Piece.RookWhite => "R",
+                (int)Piece.QueenWhite => "Q",
+                (int)Piece.KingWhite => "K",
+                (int)Piece.PawnBlack => "p",
+                (int)Piece.KnightBlack => "n",
+                (int)Piece.BishopBlack => "b",
+                (int)Piece.RookBlack => "r",
+                (int)Piece.QueenBlack => "q",
+                (int)Piece.KingBlack => "k",
+                _ => "."
+            };
+        }
+
+    }
+}
+
+*/
